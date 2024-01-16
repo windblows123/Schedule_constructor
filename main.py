@@ -27,8 +27,6 @@ busy = [
 }
 ]
 
-busy.sort(key=lambda time: parser.parse(time["start"]))
-
 while start_working <= finish_working - relativedelta.relativedelta(minutes=session_endurance):
     window_start = start_working
     window_end = window_start + relativedelta.relativedelta(minutes=session_endurance)
